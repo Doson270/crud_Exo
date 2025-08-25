@@ -7,11 +7,17 @@
     $request = $pdo->prepare("SELECT * FROM books WHERE id = ?");
     $request->execute([$bookId]);
     $book = $request->fetch();
-  } else{
+  }
+
+  if(!$book) {
     header("location: index.php");
     exit();
   }
-  if(!$book) {
+
+  if(isset($_GET["delete"]) && isset($_GET["id"])) {
+    $bookId = $_GET["id"];
+    $request = $pdo->prepare("DELETE FROM books WHERE id = ?");
+    $request->execute([$bookId]);
     header("location: index.php");
     exit();
   }
@@ -33,6 +39,7 @@
       <?= $book["title"] ?>
       <?= $book["description"] ?>
       <?= $book["author"] ?>
+      <a href="?delete=1&id=<?= $book["id"] ?>">Supprimer</a>
     </main>
     <footer>
         <?php include 'include/footer.php' ?>

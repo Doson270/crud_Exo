@@ -1,3 +1,13 @@
+<?php
+  require_once "database/database.php";
+  $pdo = dbLog();
+  if(isset($_GET["id"])) {
+    $bookId = $_GET["id"];
+    $request = $pdo->prepare("SELECT * FROM books WHERE id = ?");
+    $request->execute([$bookId]);
+    $book = $request->fetch();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +18,15 @@
 </head>
 <body>
     <header>
-        <?php include 'include/header.php' ?> 
+        <?php include 'include/header.php' ?>
     </header>
     <main>
-        
+      <?= $book["title"] ?>
+      <?= $book["description"] ?>
+      <?= $book["author"] ?>
     </main>
     <footer>
         <?php include 'include/footer.php' ?>
-    </footer>  
+    </footer>
 </body>
 </html>

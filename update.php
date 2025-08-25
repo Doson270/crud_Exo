@@ -36,16 +36,19 @@
     <link rel="stylesheet" href="style/include.css">
 </head>
 <body>
+  <header>
+    <?php include "include/header.php" ?>
+  </header>
   <main>
     <form method="post">
-      <label for="bookTitle" class="form-label mt-4">Titre du livre</label>
       <input type="text" name="bookTitle" class="form-control" id="bookTitle" aria-describedby="emailHelp" placeholder="Titre du livre" value="<?= $currentBook["title"] ?>">
-      <label for="bookDesc">Description du livre</label>
       <textarea name="bookDesc" id="bookDesc" class="form-control" placeholder="Descrption du livre"><?= $currentBook["description"] ?></textarea>
-      <label for="bookAuthor">Auteur du livre</label>
       <input type="text" id="bookAuthor" name="bookAuthor" class="form-control" placeholder="Auteur du livre" value="<?= $currentBook["author"] ?>">
       <input type="submit" value="Modifier" class="btn btn-primary">
     </form>
   </main>
+  <footer>
+    <?php include "include/footer.php" ?>
+  </footer>
 </body>
 </html>

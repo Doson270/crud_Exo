@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="style/include.css">
 </head>
 <body>
-    <header>
-        <?php include "include/header.php" ?>
-    </header>
-  <main class="container mt-5">
+  <header>
+    <?php include "include/header.php" ?>
+  </header>
+  <main>
+  <section class="sectionBooks" name="sectionBooks" id="sectionBooks">
     <h1>Ajouter un livre</h1>
-
     <?php if (!empty($errors)) { ?>
       <div class="alert alert-danger">
         <?php foreach ($errors as $error) { ?>
@@ -53,17 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php } ?>
 
     <form method="post">
-      <label for="bookTitle" class="form-label mt-4">Titre du livre</label>
       <input type="text" name="bookTitle" class="form-control" id="bookTitle" placeholder="Titre du livre">
-
-      <label for="bookDesc" class="form-label mt-4">Description du livre</label>
       <textarea name="bookDesc" id="bookDesc" class="form-control" placeholder="Description du livre"></textarea>
-
-      <label for="bookAuthor" class="form-label mt-4">Auteur du livre</label>
       <input type="text" id="bookAuthor" name="bookAuthor" class="form-control" placeholder="Auteur du livre">
-
       <input type="submit" value="Ajouter" class="btn btn-primary mt-3">
     </form>
+        </section>
   </main>
   <footer>
     <?php include "include/footer.php" ?>

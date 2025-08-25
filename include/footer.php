@@ -1,3 +1,3 @@
 <span class="footerCreate">
-    Create by Doson270, Blacksnyd and OscarcracDEV
+    Create by Doson270 and Blacksnyd
 </span>

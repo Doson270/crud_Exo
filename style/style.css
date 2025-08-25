@@ -104,7 +104,12 @@ input[type="submit"] {
   background-color: transparent;
   cursor: pointer;
 }
-.footerCreate {
+
+.sectionForm {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sectionForm > h1 {
+    margin: 20px;
 }

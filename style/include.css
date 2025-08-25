@@ -58,4 +58,9 @@
 .nav-links li a:hover {
   color: #ffdd57;
 }
+.footerCreate {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 

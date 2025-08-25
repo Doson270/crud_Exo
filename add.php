@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php include "include/header.php" ?>
   </header>
   <main>
-  <section class="sectionBooks" name="sectionBooks" id="sectionBooks">
+  <section class="sectionForm" name="sectionForm" id="sectionForm">
     <h1>Ajouter un livre</h1>
     <?php if (!empty($errors)) { ?>
       <div class="alert alert-danger">

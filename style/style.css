@@ -78,5 +78,28 @@ body {
 }
 
 .btnBook:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+input, textarea {
+  padding: 17px;
+  font-size: 15px;
+  border: 2px solid #0d6efd;
+  border-radius: 10px;
+  margin: 15px;
+}
+textarea::placeholder {
+  color: #96c0ff;
+}
+input::placeholder {
+  color: #96c0ff;
+}
+input[type="submit"] {
+  color: #0d6efd;
+  background-color: transparent;
+  cursor: pointer;
 }

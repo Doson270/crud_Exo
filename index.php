@@ -25,9 +25,9 @@
               <div class="imgContainer">
                 <img class="imgBooks" src="img/Meinkampf.jpg" alt="">
               </div>
-              <h3 classe="nameBook"><?= $book["title"] ?></h3>
+              <h3 class="nameBook"><?= $book["title"] ?></h3>
               <span>Par <?= $book["author"]?></span>
-              <a href="book.php?id=<?= $book["id"] ?>" class=>Voir le produit</a>
+              <a href="book.php?id=<?= $book["id"] ?>" class="btnBook">Voir le produit</a>
             </div>
           <?php } ?>
         </section>

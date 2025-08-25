@@ -15,9 +15,9 @@ body {
 
 /* Conteneur principal */
 .sectionBooks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* Carte livre */
@@ -31,6 +31,7 @@ body {
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s;
     margin: 30px;
+    width: 20%;
 }
 
 .booksContainer:hover {
@@ -80,4 +81,8 @@ body {
 
 .btnBook:hover {
     background-color: #005fa3;
+}
+.footerCreate {
+    display: flex;
+    justify-content: center;
 }

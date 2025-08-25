@@ -14,13 +14,11 @@ $dbname = "mybooks";
 // identifiant de connection
 $username = "root";
 // mdp de connexion
-$password = ""; 
-// port
-$port = 3306;
-// encodage
+$password = "root";
+$port = 8889;
 $charset = "utf8mb4";
-// je creer un try et un catch pour pouvoir tester ma ligne de code 
-// qui contient mes information pour pouvoir me connecter a ma BDD 
+// je creer un try et un catch pour pouvoir tester ma ligne de code
+// qui contient mes information pour pouvoir me connecter a ma BDD
 // et si elle ne fonctionne pas on peut renvoyer une ligne de code sur pour pas que sa plant
     try {
         // mes parametre de connexion
@@ -37,8 +35,8 @@ $charset = "utf8mb4";
         return $pdo;
 // le catch va gerer mes erreurs
     } catch (PDOException $e) {
-        // si un probleme est detecté on dit d'arreter la lecture du code avec die 
+        // si un probleme est detecté on dit d'arreter la lecture du code avec die
         // et de me renvoyer l'erreur qui ce trouve dans $e
         die("Error 404". $e->getMessage());
-    }   
+    }
 }

@@ -1,7 +1,6 @@
 <?php
 require_once "database/database.php";
 $errors = [];
-$success = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $bookTitle = trim($_POST["bookTitle"] ?? "");
@@ -19,19 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if (empty($errors)) {
-        try {
-            $pdo = dbLog();
-            $request = $pdo->prepare("INSERT INTO books (title, description, author) VALUES (?, ?, ?)");
-
-            if ($request->execute([$bookTitle, $bookDesc, $bookAuthor])) {
-                $success = "Livre ajouté avec succès ✅";
-            } else {
-                $errors[] = implode(" | ", $request->errorInfo());
-            }
-
-        } catch (PDOException $e) {
-            $errors[] = "Erreur PDO : " . $e->getMessage();
-        }
+      try {
+        $pdo = dbLog();
+        $request = $pdo->prepare("INSERT INTO books (title, description, author) VALUES (?, ?, ?)");
+        $request->execute([$bookTitle, $bookDesc, $bookAuthor]);
+      } catch (PDOException $e) {
+        $errors[] = "Erreur PDO : " . $e->getMessage();
+      }
     }
 }
 ?>
@@ -51,19 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <main class="container mt-5">
     <h1>Ajouter un livre</h1>
 
-    <?php if (!empty($errors)): ?>
+    <?php if (!empty($errors)) { ?>
       <div class="alert alert-danger">
-        <?php foreach ($errors as $error): ?>
-          <p><?= htmlspecialchars($error) ?></p>
-        <?php endforeach; ?>
+        <?php foreach ($errors as $error) { ?>
+          <?= $error ?>
+        <?php } ?>
       </div>
-    <?php endif; ?>
-
-    <?php if ($success): ?>
-      <div class="alert alert-success">
-        <?= htmlspecialchars($success) ?>
-      </div>
-    <?php endif; ?>
+    <?php } ?>
 
     <form method="post">
       <label for="bookTitle" class="form-label mt-4">Titre du livre</label>

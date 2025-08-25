@@ -1,7 +1,6 @@
 <?php
 
 function dbLog() {
-
   $host = "localhost";
   $db_name = "mybooks";
   $username = "root";

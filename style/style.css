@@ -1,22 +1,83 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Conteneur principal */
 .sectionBooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Carte livre */
+.booksContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     display: flex;
-    justify-content: space-evenly;  
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 30px;
 }
-.imgBooks {
-    width: 100%;
-    border-radius: 5px;
+
+.booksContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Image */
 .imgContainer {
     width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
 }
-.booksContainer {
-    margin-top: 50px;
-    width: 15%;
+
+.imgBooks {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
 }
-.nameBooks {
-    font-size: 20px;
+
+/* Titre et auteur */
+.nameBook {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
 }
-.nameBooks > span {
-    font-size: 16px;
+
+.booksContainer span {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 5px 0 15px;
+    text-align: center;
+}
+
+/* Bouton */
+.btnBook {
+    text-decoration: none;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.btnBook:hover {
+    background-color: #005fa3;
 }

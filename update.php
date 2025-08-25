@@ -8,6 +8,11 @@
   $request->execute([$bookId]);
   $currentBook = $request->fetch();
 
+  if(!$currentBook) {
+    header("location: index.php");
+    exit();
+  }
+
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $bookTitle = (!empty($_POST["bookTitle"]) ? $_POST["bookTitle"] : $currentBook["title"]);
     $bookDesc = (!empty($_POST["bookDesc"]) ? $_POST["bookDesc"] : $currentBook["description"]);

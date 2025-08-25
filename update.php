@@ -40,12 +40,15 @@
     <?php include "include/header.php" ?>
   </header>
   <main>
+    <section class="sectionForm">
+      <h1>Modifier un livre</h1>
     <form method="post">
       <input type="text" name="bookTitle" class="form-control" id="bookTitle" aria-describedby="emailHelp" placeholder="Titre du livre" value="<?= $currentBook["title"] ?>">
       <textarea name="bookDesc" id="bookDesc" class="form-control" placeholder="Descrption du livre"><?= $currentBook["description"] ?></textarea>
       <input type="text" id="bookAuthor" name="bookAuthor" class="form-control" placeholder="Auteur du livre" value="<?= $currentBook["author"] ?>">
       <input type="submit" value="Modifier" class="btn btn-primary">
     </form>
+    </section>
   </main>
   <footer>
     <?php include "include/footer.php" ?>

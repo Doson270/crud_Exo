@@ -17,25 +17,25 @@
                 <div class="imgContainer">
                     <img class="imgBooks" src="img/Meinkampf.jpg" alt="">
                 </div>
-                <h3 classe="nameBook">Titre du livre</h3>
+                <h3 class="nameBook">Titre du livre</h3>
                 <span>Nom de l'auteur</span>
-                <a href="book.php" class=>Voir le produit</a>
+                <a href="book.php" class="btnBook">Voir le produit</a>
             </div>
             <div class="booksContainer" name="booksContainer" id="booksContainer">
                 <div class="imgContainer">
                     <img class="imgBooks" src="img/Meinkampf.jpg" alt="">
                 </div>
-                <h3 classe="nameBook">Titre du livre</h3>
+                <h3 class="nameBook">Titre du livre</h3>
                 <span>Nom de l'auteur</span>
-                <a href="book.php" class=>Voir le produit</a>
+                <a href="book.php" class="btnBook">Voir le produit</a>
             </div>
             <div class="booksContainer" name="booksContainer" id="booksContainer">
                 <div class="imgContainer">
                     <img class="imgBooks" src="img/Meinkampf.jpg" alt="">
                 </div>
-                <h3 classe="nameBook">Titre du livre</h3>
+                <h3 class="nameBook">Titre du livre</h3>
                 <span>Nom de l'auteur</span>
-                <a href="book.php" class=>Voir le produit</a>
+                <a href="book.php" class="btnBook">Voir le produit</a>
             </div>
         </section>
     </main>

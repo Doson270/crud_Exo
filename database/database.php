@@ -10,7 +10,6 @@ function dbLog() {
 $host = "localhost";
 // le nom de la BDD
 $dbname = "mybooks";
-// identifiant de connection
 $username = "root";
 // mdp de connexion
 $password = ""; 

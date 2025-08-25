@@ -7,6 +7,5 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 <body>
-    
 </body>
 </html>

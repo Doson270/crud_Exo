@@ -26,10 +26,10 @@
 </head>
 <body>
     <header>
-        <?php include 'include/header.php' ?>
+      <?php include 'include/header.php' ?>
     </header>
     <main>
-    <?= $book["title"] ?>
+      <?= $book["title"] ?>
       <?= $book["description"] ?>
       <?= $book["author"] ?>
     </main>
